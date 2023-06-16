@@ -31,61 +31,100 @@ void startAndWait()
 
 void loop()
 {
-  // startAndWait();
-  // Serial2.println("m1=010");
-  // Serial2.println("m2=135");
-  // Serial2.println("m3=000");
-  // Serial2.println("m4=125");
-  // startAndWait();
-  // delay(1000);
+  /* CODE FOR TERMINATOR3001 */
 
+  // Starting Position for Third Arm
+  startAndWait();
+  Serial3.println("m1=075");
+  Serial3.println("m2=110");
+  Serial3.println("m3=020");
+  Serial3.println("m4=090");
+  Serial3.println("m6=010");
+  startAndWait();
 
-
-   delay(4000);
-
-
-  // Code For Robot Arm 1
-  Serial1.println("m1=180");
-   Serial2.println("m1=010");
+  // First Arm Picking up the Sponge.And The Second Getting into Position
+  Serial1.println("m1=165");
+  Serial2.println("m1=010");
+  startAndWait();
   Serial1.println("m2=080");
-   Serial2.println("m2=120");
+  Serial2.println("m2=120");
+  startAndWait();
   Serial1.println("m3=030");
-   Serial2.println("m3=000");
+  Serial2.println("m3=000");
+  startAndWait();
   Serial1.println("m4=000");
-  Serial2.println("m4=125");
+  Serial2.println("m4=075");
+  startAndWait();
+
+  //First Arm Picking Up the Sponge
   Serial1.println("m6=010");
-  Serial.println("tuka odi");
   startAndWait();
-  Serial1.println("m3=010");
+  Serial1.println("m6=073");
+  startAndWait();
   
-  Serial.println("tuka dali odi");
+  Serial1.println("m3=080");
+  Serial2.println("m6=010");
   startAndWait();
-  Serial1.println("m6=073");
-   Serial2.println("m6=073");
-  startAndWait();
-  Serial1.println("m1=055");
-   Serial2.println("m6=010");
-  Serial1.println("m3=050");
-   Serial2.println("m6=073");
   Serial1.println("m4=045");
-    Serial2.println("m1=140");
+  Serial2.println("m1=020");
+  delay(2000);
   startAndWait();
+  Serial1.println("m1=045");
+  startAndWait();
+  Serial1.println("m4=020");
+  Serial2.println("m3=020");
+  startAndWait();
+
+  // First Arm Passing the Sponge to the Second
   Serial1.println("m6=073");
-    Serial2.println("m6=010");
-      Serial2.println("m6=073");
+  startAndWait();
+  Serial2.println("m6=010");
+  delay(2000);
+  startAndWait();
+  Serial2.println("m6=073");
   startAndWait();
   delay(2000);
   Serial1.println("m6=010");
+  Serial2.println("m3=050");
   startAndWait();
 
- 
-            
-
-
-
-  // Code For Robot Arm 2
-  
+  // Passing to Third Arm Start
+  Serial2.println("m1=130");
   startAndWait();
- 
- 
+  delay(4000);
+  startAndWait();
+  Serial3.println("m3=010");
+  startAndWait();
+  Serial2.println("m3=020");
+  startAndWait();
+  Serial3.println("m6=073");
+  startAndWait();
+  delay(1000);
+  Serial2.println("m6=010");
+  startAndWait();
+  Serial2.println("m3=040");
+
+  // Third Arm Picking Up the Sponge
+  startAndWait();
+  Serial3.println("m3=060");
+  delay(2000);
+  startAndWait();
+  Serial3.println("m1=075");
+  startAndWait();
+  Serial3.println("m6=073");
+  startAndWait();
+  Serial3.println("m1=150");
+  startAndWait();
+
+  // Third Arm Setting the Sponge Down
+  Serial3.println("m2=090");
+  Serial3.println("m3=020");
+  Serial3.println("m4=090");
+  startAndWait();
+  Serial3.println("m4=180");
+  startAndWait();
+  Serial3.println("m6=010");
+  startAndWait();
+  Serial3.println("m4=090");
+  startAndWait();
 }
