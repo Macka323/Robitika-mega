@@ -1,38 +1,48 @@
+/*
+  CODE FOR TERMINATOR3001
+
+  All hands are connected to an ArduinoUno.And each Uno is connected to the ArduinoMega with this code
+  Each hand also has a corresponding Serial number:
+  Serial1 - First Arm
+  Serial2 - Second Armm
+  Serial3 - Third Arm 
+*/
+
 #include <Arduino.h>
 
-void setup()
-{
-  Serial.begin(115200);
-  Serial1.begin(115200);
-  Serial2.begin(115200);
-  Serial3.begin(115200);
-}
-
+// startAndWait makes it so all three hands can move independent of each other
+// This also allows each hand to be better coordinated and timed with delay which has to be placed in between startAndWait
 void startAndWait()
 {
   Serial1.println("s");
+  Serial2.println("s");
+  Serial3.println("s");
+  
   while (Serial1.readStringUntil('\n')[0] != 'e')
   {
     break;
   }
-
-  Serial2.println("s");
   while (Serial2.readStringUntil('\n')[0] != 'e')
   {
     break;
   }
-
-  Serial3.println("s");
   while (Serial3.readStringUntil('\n')[0] != 'e')
   {
     break;
   }
 }
 
-void loop()
+void setup()
 {
-  /* CODE FOR TERMINATOR3001 */
+  // Adjusting Arm Speed
+  Serial.begin(115200);
+  Serial1.begin(115200);
+  Serial2.begin(115200);
+  Serial3.begin(115200);
+}
 
+void loop()
+{ 
   // Starting Position for Third Arm
   startAndWait();
   Serial3.println("m1=075");
@@ -56,12 +66,13 @@ void loop()
   Serial2.println("m4=075");
   startAndWait();
 
-  //First Arm Picking Up the Sponge
+  // First Arm Picking Up the Sponge
   Serial1.println("m6=010");
   startAndWait();
   Serial1.println("m6=073");
   startAndWait();
-  
+
+  // Both hands getting into position
   Serial1.println("m3=080");
   Serial2.println("m6=010");
   startAndWait();
