@@ -44,7 +44,10 @@ Example:
     Serial1.println("m1=000");
     Serial1.println("m1=090");
     Serial1.println("m1=180");
-  
+
+
+This will be explained in more detail in the [ArduinoUno](https://github.com/Macka323/Robotika-uno) part of the project
+
 ## Made With
 - ### C++
 - ### Platform.io
