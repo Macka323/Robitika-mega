@@ -3,10 +3,10 @@ This project is seperated into two parts.
 The code for the ArduinoMega, which is this, and the [ArduinoUno](https://github.com/Macka323/Robotika-uno).
 
 ## About The Project
-- [Summary](##summary)
-- [How it Works](##how-it-works)
-- [Built With](##built-with)
-- [Project Members](##project-members)
+- [Summary](##Summary)
+- [How it Works](##How-it-Works)
+- [Made With](##Made-With)
+- [Project Members](##Project-Members)
 
 ## Summary
 We had three [Braccio Robot Arms](https://store.arduino.cc/products/tinkerkit-braccio-robot).Our goal was to synchronize all three so they would pass the sponges that came in their packaging like you'd see robots inside factories passing boxes from one to the other.Originally we wanted them to pass one sponge around in a circle, but we decided against it because we wanted to use the space we had more properly.
@@ -36,7 +36,7 @@ Example:
   Serial1.println("m1=090");
   Serial1.println("m1=180");
 
-## Built With
+## Made With
 - ### C++
 - ### Platform.io
 
