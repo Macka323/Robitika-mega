@@ -15,27 +15,36 @@ The time this took to finish took a little under two months and we achived our g
 ## How it Works
 The arms each have six motors going from M1 to M6.Each with different degrees for range of motion.
 Each Motor:
-1. M1 = 0 to 180 - The Base
-2. M2 = 15 to 165 - The Shoulder
-3. M3 = 0 to 180 - The Elbow
-4. M4 = 0 to 180 - The Vertical Wrist Elbow
-5. M5 = 0 to 180 - The Rotatory Wrist
-6. M6 = 10 to 73 - The Gripper
+- M1 = 0 to 180 - The Base
+- M2 = 15 to 165 - The Shoulder
+- M3 = 0 to 180 - The Elbow
+- M4 = 0 to 180 - The Vertical Wrist Elbow
+- M5 = 0 to 180 - The Rotatory Wrist
+- M6 = 10 to 73 - The Gripper
 
-Normally, the code for this would be like this: \
-  Braccio.ServoMovement(20  , 90, 90, 90, 90, 90, 73);
-\
-In our case it's like this: \
-  Serial.println("m1=090");
+
+Normally, the code for this would be like this:
+
+
+    Braccio.ServoMovement(20  , 90, 90, 90, 90, 90, 73);
+
+In our case it's like this:
+
+
+    Serial1.println("m1=090");
+
+
 
 For one we don't have to set the speed of each movement because they're set in void setup(). \
 We can also only set one joint's movement at a time and they have to be set as strings.This is done to not cause conflicts with the ArduinoMega. \
 This also means that numbers have to be entered with all three numbers regardless of if it's in the ones,tens or hundreds. \
-Example: \
-  Serial1.println("m1=000"); \
-  Serial1.println("m1=090"); \
-  Serial1.println("m1=180"); \
+Example:
 
+
+    Serial1.println("m1=000");
+    Serial1.println("m1=090");
+    Serial1.println("m1=180");
+  
 ## Made With
 - ### C++
 - ### Platform.io
