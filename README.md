@@ -22,19 +22,19 @@ Each Motor:
 5. M5 = 0 to 180 - The Rotatory Wrist
 6. M6 = 10 to 73 - The Gripper
 
-Normally, the code for this would be like this:
+Normally, the code for this would be like this: \
   Braccio.ServoMovement(20  , 90, 90, 90, 90, 90, 73);
-
-In our case it's like this:
+\
+In our case it's like this: \
   Serial.println("m1=090");
 
-For one we don't have to set the speed of each movement because they're set in void setup().
-We can also only set one joint's movement at a time and they have to be set as strings.This is done to not cause conflicts with the ArduinoMega.
-This also means that numbers have to be entered with all three numbers regardless of if it's in the ones,tens or hundreds.
-Example:
-  Serial1.println("m1=000");
-  Serial1.println("m1=090");
-  Serial1.println("m1=180");
+For one we don't have to set the speed of each movement because they're set in void setup(). \
+We can also only set one joint's movement at a time and they have to be set as strings.This is done to not cause conflicts with the ArduinoMega. \
+This also means that numbers have to be entered with all three numbers regardless of if it's in the ones,tens or hundreds. \
+Example: \
+  Serial1.println("m1=000"); \
+  Serial1.println("m1=090"); \
+  Serial1.println("m1=180"); \
 
 ## Made With
 - ### C++
